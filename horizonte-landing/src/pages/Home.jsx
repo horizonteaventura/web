@@ -4,6 +4,7 @@ import Section from "../components/Section.jsx";
 import Gallery from "../components/Gallery.jsx";
 import VideoGrid from "../components/VideoGrid.jsx";
 import Footer from "../components/Footer.jsx";
+import Contact from "../components/Contact.jsx";
 import { experiences, galleryImages, videos } from "../data/content.js";
 
 export default function Home() {
@@ -45,7 +46,14 @@ export default function Home() {
       >
         <VideoGrid items={videos} />
       </Section>
-
+      <Section
+        id="contacto"
+        kicker="Hablemos"
+        title="Contacto"
+        subtitle="Reserva directa por WhatsApp o escríbenos desde el formulario."
+      >
+        <Contact />
+      </Section>
       <Footer />
     </>
   );

@@ -1,7 +1,7 @@
 export const site = {
   brand: "Horizonte Aventura",
   tagline: "Bajadas de río guiadas en Isla de Maipo",
-  whatsapp: "https://wa.me/569XXXXXXXX?text=Hola%20Horizonte%20Aventura,%20quiero%20reservar%20una%20bajada%20de%20r%C3%ADo",
+  whatsapp: "https://wa.me/56995095242?text=Hola%20Horizonte%20Aventura,%20quiero%20reservar%20una%20bajada%20de%20r%C3%ADo",
   instagram: "https://www.instagram.com/horizonte.aventura/",
 };
 
