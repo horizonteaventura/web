@@ -33,7 +33,7 @@ export default function Home() {
         id="galeria"
         kicker="Fotos"
         title="Galería"
-        subtitle="Imágenes desde /public/media/images. Solo reemplaza los archivos."
+        subtitle=""
       >
         <Gallery images={galleryImages} />
       </Section>
@@ -42,7 +42,7 @@ export default function Home() {
         id="videos"
         kicker="Videos"
         title="Videos"
-        subtitle="Videos desde /public/media/videos (mp4)."
+        subtitle=""
       >
         <VideoGrid items={videos} />
       </Section>
