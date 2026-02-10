@@ -12,7 +12,7 @@ export default function Contact() {
         </p>
 
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <a className="btn btn-primary" href={site.whatsapp} target="_blank" rel="noreferrer">
+          <a className="btn btn-primary" href={site.whatsappNumber} target="_blank" rel="noreferrer">
             Reservar por WhatsApp
           </a>
           <a className="btn" href={site.instagram} target="_blank" rel="noreferrer">
@@ -45,7 +45,7 @@ export default function Contact() {
             );
 
             // Abrir WhatsApp con el mensaje
-            window.open(site.whatsapp.split("?")[0] + `?text=${text}`, "_blank", "noreferrer");
+            window.open(site.whatsappNumber.split("?")[0] + `?text=${text}`, "_blank", "noreferrer");
           }}
         >
           <label style={{ display: "block", marginBottom: 10 }}>

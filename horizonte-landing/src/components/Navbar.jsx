@@ -32,7 +32,7 @@ export default function Navbar() {
           <a className="btn" href={site.instagram} target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a className="btn btn-primary" href={site.whatsapp} target="_blank" rel="noreferrer">
+          <a className="btn btn-primary" href={site.whatsappNumber} target="_blank" rel="noreferrer">
             Reservar
           </a>
 
@@ -62,7 +62,7 @@ export default function Navbar() {
               <a className="btn" href={site.instagram} target="_blank" rel="noreferrer">
                 Instagram
               </a>
-              <a className="btn btn-primary" href={site.whatsapp} target="_blank" rel="noreferrer">
+              <a className="btn btn-primary" href={site.whatsappNumber} target="_blank" rel="noreferrer">
                 Reservar
               </a>
             </div>
