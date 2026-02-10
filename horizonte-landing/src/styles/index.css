@@ -159,3 +159,182 @@ img,video{display:block;max-width:100%}
   transform: translateX(120%);
   transition: transform 600ms ease, opacity 300ms ease;
 }
+
+
+/* ===== Responsive polish ===== */
+@media (max-width: 640px) {
+  .section { padding: 54px 0; }
+  .hero h1 { font-size: 34px; }
+  .title { font-size: 26px; }
+  .nav-inner { padding: 12px 0; }
+  .nav-cta .btn { padding: 10px 12px; border-radius: 12px; }
+}
+
+/* ===== Brand with logo ===== */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.06);
+}
+
+/* ===== Section backgrounds ===== */
+.section--a{
+  background: radial-gradient(900px 500px at 15% 0%, rgba(0,170,255,.18), transparent 60%);
+}
+.section--b{
+  background: radial-gradient(900px 500px at 85% 0%, rgba(0,255,170,.14), transparent 60%);
+}
+.section--c{
+  background: radial-gradient(900px 500px at 50% 0%, rgba(255,255,255,.10), transparent 65%);
+}
+
+/* ===== Experience cards ===== */
+.exp-card { padding: 0; overflow: hidden; }
+.exp-media { height: 180px; }
+.exp-body { padding: 18px; }
+.exp-title { margin: 0 0 8px; font-size: 18px; }
+.exp-desc { margin: 0 0 12px; color: var(--muted); line-height: 1.55; }
+.exp-list { margin: 0 0 14px; padding-left: 18px; color: var(--muted); }
+.exp-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .exp-media { height: 160px; }
+}
+
+/* Navbar responsive */
+.nav-links--desktop { display: flex; }
+.burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  cursor: pointer;
+  padding: 10px;
+}
+.burger span{
+  display:block;
+  height:2px;
+  background: rgba(255,255,255,.8);
+  margin: 6px 0;
+  border-radius: 2px;
+}
+
+.nav-mobile{
+  border-top: 1px solid var(--border);
+  background: rgba(6,17,31,.78);
+  backdrop-filter: blur(12px);
+}
+.nav-mobile-inner{
+  padding: 12px 0 16px;
+  display: grid;
+  gap: 10px;
+}
+.nav-mobile-inner a{
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+.nav-mobile-inner a:hover{
+  background: rgba(255,255,255,.10);
+}
+.nav-mobile-cta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .nav-links--desktop { display: none; }
+  .burger { display: inline-flex; align-items:center; justify-content:center; }
+}
+
+
+/* ===== Showcase layout (like reference) ===== */
+.stack { display: grid; gap: 18px; }
+
+.showcase{
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 18px;
+  padding: 18px;
+}
+
+.showcase-media{
+  min-height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.showcase-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.showcase-title{
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -.02em;
+}
+
+.showcase-subtitle{
+  margin: 0 0 14px;
+  color: var(--text);
+  opacity: .9;
+}
+
+.showcase-desc{
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.showcase-list{
+  margin: 0 0 16px;
+  padding-left: 18px;
+  color: var(--text);
+  opacity: .9;
+}
+.showcase-list li{ margin: 6px 0; }
+
+.showcase-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+/* Mini grid inside each experience */
+.mini-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+.mini-item{ aspect-ratio: 16/10; overflow: hidden; }
+.mini-img, .mini-video{ width: 100%; height: 100%; object-fit: cover; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .showcase{ grid-template-columns: 1fr; }
+  .showcase-media{ min-height: 260px; }
+  .mini-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px){
+  .showcase-title{ font-size: 22px; }
+  .mini-grid{ grid-template-columns: 1fr; }
+}

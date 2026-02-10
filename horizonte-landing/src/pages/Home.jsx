@@ -1,59 +1,38 @@
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
-import Section from "../components/Section.jsx";
-import Gallery from "../components/Gallery.jsx";
-import VideoGrid from "../components/VideoGrid.jsx";
 import Footer from "../components/Footer.jsx";
 import Contact from "../components/Contact.jsx";
-import { experiences, galleryImages, videos } from "../data/content.js";
+import ExperienceShowcase from "../components/ExperienceShowcase.jsx";
+import { experiences } from "../data/content.js";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <div id="home" />
       <Hero />
 
-      <Section
-        id="experiencias"
-        kicker="Qué hacemos"
-        title="Experiencias"
-        subtitle="Opciones pensadas para grupos, familias o equipos. Ajustable según nivel."
-      >
-        <div className="grid grid-2">
-          {experiences.map((e) => (
-            <div key={e.title} className="card">
-              <h3 style={{ margin: "0 0 8px" }}>{e.title}</h3>
-              <p style={{ margin: 0, color: "var(--muted)" }}>{e.desc}</p>
-            </div>
-          ))}
+      <div className="section section--a" id="experiencias">
+        <div className="container">
+          <div className="kicker">Experiencias</div>
+          <h2 className="title">Fotos, videos y detalle por actividad</h2>
+          <p className="subtitle">
+            Cada experiencia incluye guía, equipamiento e inducción de seguridad.
+          </p>
+
+          <ExperienceShowcase items={experiences} />
         </div>
-      </Section>
+      </div>
 
-      <Section
-        id="galeria"
-        kicker="Fotos"
-        title="Galería"
-        subtitle=""
-      >
-        <Gallery images={galleryImages} />
-      </Section>
+      <div className="section section--c" id="contacto">
+        <div className="container">
+          <div className="kicker">Hablemos</div>
+          <h2 className="title">Contacto</h2>
+          <p className="subtitle">Reserva por WhatsApp o déjanos tus datos.</p>
+          <Contact />
+        </div>
+      </div>
 
-      <Section
-        id="videos"
-        kicker="Videos"
-        title="Videos"
-        subtitle=""
-      >
-        <VideoGrid items={videos} />
-      </Section>
-      <Section
-        id="contacto"
-        kicker="Hablemos"
-        title="Contacto"
-        subtitle="Reserva directa por WhatsApp o escríbenos desde el formulario."
-      >
-        <Contact />
-      </Section>
       <Footer />
     </>
   );
