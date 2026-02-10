@@ -1,7 +1,7 @@
 export const site = {
   brand: "Horizonte Aventura",
   instagram: "https://www.instagram.com/horizonte.aventura/",
-  whatsappNumber: "569XXXXXXXX", // <- tu número sin +, sin espacios
+  whatsappNumber: "56995095242", // <- tu número sin +, sin espacios
 };
 
 export const experiences = [
