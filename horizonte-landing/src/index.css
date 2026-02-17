@@ -24,10 +24,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: block; /* <- antes estaba flex */
+  place-items: initial; /* <- lo desactiva */
 }
 
 h1 {
@@ -65,4 +65,29 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Mostrar \n como saltos de línea en textos */
+.preline {
+  white-space: pre-line;
+}
+
+/* Tags / chips */
+.showcase-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 6px;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+}
+
+/* Opcional: que "Incluye:" se separe un poco */
+.showcase-includes-title {
+  margin: 10px 0 8px;
 }

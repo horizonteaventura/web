@@ -12,23 +12,29 @@ export default function Home() {
       <div id="home" />
       <Hero />
 
+      {/* EXPERIENCIAS */}
       <div className="section section--a" id="experiencias">
         <div className="container">
           <div className="kicker">Experiencias</div>
-          <h2 className="title">Fotos, videos y detalle por actividad</h2>
+          <h2 className="title">
+            Travesías y experiencias en el Río Maipo
+          </h2>
           <p className="subtitle">
-            Cada experiencia incluye guía, equipamiento e inducción de seguridad.
+            Cada experiencia está diseñada con planificación precisa, guías certificados y equipamiento profesional.
           </p>
 
           <ExperienceShowcase items={experiences} />
         </div>
       </div>
 
+      {/* RESERVA */}
       <div className="section section--c" id="contacto">
         <div className="container">
-          <div className="kicker">Hablemos</div>
-          <h2 className="title">Contacto</h2>
-          <p className="subtitle">Reserva por WhatsApp o déjanos tus datos.</p>
+          <div className="kicker">Reserva</div>
+          <h2 className="title">Reserva & Coordinación</h2>
+          <p className="subtitle">
+            Agenda tu experiencia y coordinamos los detalles de manera personalizada.
+          </p>
           <Contact />
         </div>
       </div>

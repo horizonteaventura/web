@@ -1,27 +1,76 @@
 export const site = {
   brand: "Horizonte Aventura",
   instagram: "https://www.instagram.com/horizonte.aventura/",
-  whatsappNumber: "56995095242", // <- tu número sin +, sin espacios
+  whatsappNumber: "56995095242", // sin +, sin espacios
 };
 
 export const experiences = [
+  // 1) Travesías en kayak por el Río Maipo
   {
-    id: "fullday-parcela",
-    title: "Full Day con parcela (quincho/piscina)",
-    subtitle: "Río + descanso: una jornada completa para disfrutar",
+    id: "kayak-maipo",
+    title: "Travesías en kayak por el Río Maipo",
+    subtitle: "Presencia, calma y autenticidad en el Río Maipo",
     desc:
-      "Vive la travesía guiada por el Río Maipo y, al terminar, disfruta el día en un espacio privado (parcela) con opción de quincho/piscina. Ideal para grupos, familias y celebraciones. Incluye equipamiento completo, inducción y guías especializados. Al finalizar hay espacio para ducharse y cambiarse.",
+      "Una experiencia guiada, segura y cuidadosamente diseñada para quienes valoran la naturaleza y el detalle.\n" +
+      "Remarás acompañado por guías expertos, con equipamiento técnico profesional y en un entorno natural privilegiado del Río Maipo.\n\n" +
+      "Aquí no vienes solo a navegar.\n" +
+      "Vienes a vivir el río con presencia, calma y autenticidad.\n\n" +
+      "Grupos reducidos.\n" +
+      "Planificación precisa.\n" +
+      "Atención personalizada en cada etapa.\n\n" +
+      "Duración aproximada: 3 horas.",
+    includesTitle: "Incluye:",
     bullets: [
-      "Travesía guiada + día completo",
-      "Opción quincho / piscina (según disponibilidad)",
-      "Guía + equipamiento + inducción de seguridad",
+      "Equipamiento técnico de alta calidad",
+      "Guías certificados con experiencia en río",
+      "Registro fotográfico profesional incluido",
+      "Inducción personalizada (apto para principiantes)",
+    ],
+    tags: ["Grupos reducidos", "Planificación precisa", "Atención personalizada", "Registro incluido"],
+    image: "/media/images/exp-medio-dia.jpg",
+    whatsappText:
+      "Hola! Quiero reservar la experiencia 'Travesías en kayak por el Río Maipo'. Somos ___ personas. ¿Qué disponibilidad hay?",
+    ctaLabel: "Reservar experiencia",
+    secondaryCtaLabel: "Explorar galería",
+    secondaryCtaHref: "#galeria",
+    galleryId: "galeria",
+    gallery: [
+      { type: "image", src: "/media/images/galeria-1.jpg", alt: "Travesía 1" },
+      { type: "image", src: "/media/images/galeria-2.jpg", alt: "Travesía 2" },
+      { type: "video", src: "/media/videos/promo-1.mp4", title: "Promo travesía" },
+    ],
+  },
+
+  // 2) Full Day Privado · Río + Parcela
+  {
+    id: "fullday-privado-parcela",
+    title: "Full Day Privado · Río + Parcela",
+    subtitle: "Aventura + descanso en un entorno privado",
+    desc:
+      "Una jornada completa diseñada para quienes buscan combinar aventura y descanso en un entorno natural cuidado y exclusivo.\n\n" +
+      "La experiencia comienza en el río, con una travesía guiada y segura por el Río Maipo. Luego, el día continúa en un espacio privado, donde podrás relajarte, compartir y disfrutar sin apuro.\n\n" +
+      "No es solo una actividad.\n" +
+      "Es un día completo bien planificado.\n\n" +
+      "Ideal para celebraciones privadas, encuentros familiares o grupos que valoran calidad y organización.",
+    includesTitle: "Incluye:",
+    bullets: [
+      "Travesía guiada en kayak (grupos reducidos)",
+      "Equipamiento técnico profesional",
+      "Guías certificados",
+      "Uso exclusivo de parcela con quincho y/o piscina (según disponibilidad)",
       "Espacios para ducharse y cambiarse",
     ],
+    tags: ["Privado", "Jornada completa", "Entorno exclusivo", "Coordinación premium"],
     image: "/media/images/exp-fullday-parcela.jpg",
     whatsappText:
-      "Hola! Quiero reservar Full Day con parcela (quincho/piscina). Somos ___ personas. ¿Fechas disponibles y valores?",
-    ctaLabel: "Reservar Full Day (parcela)",
-    // Opcional: mini fotos y/o videos dentro del bloque
+      "Hola! Quiero reservar 'Full Day Privado · Río + Parcela'. Somos ___ personas. ¿Me confirmas disponibilidad y condiciones?",
+    ctaLabel: "Reservar experiencia Full Day",
+    secondaryCtaLabel: "Consultar disponibilidad",
+    secondaryCtaHref:
+      "https://wa.me/56995095242?text=" +
+      encodeURIComponent(
+        "Hola! Quisiera consultar disponibilidad para 'Full Day Privado · Río + Parcela'. Fecha estimada: ____. Personas: ____."
+      ),
     gallery: [
       { type: "image", src: "/media/images/galeria-1.jpg", alt: "Full day parcela 1" },
       { type: "image", src: "/media/images/galeria-2.jpg", alt: "Full day parcela 2" },
@@ -29,66 +78,62 @@ export const experiences = [
     ],
   },
 
+  // 3) Experiencia Clásica · Travesía de Medio Día
   {
-    id: "fullday-sin-parcela",
-    title: "Full Day sin parcela",
-    subtitle: "Travesía + tiempo libre (sin uso de parcela)",
+    id: "clasica-medio-dia",
+    title: "Experiencia Clásica · Travesía de Medio Día",
+    subtitle: "Segura, guiada y cuidadosamente planificada",
     desc:
-      "Una jornada completa pensada para quienes quieren hacer la actividad y luego seguir el día por su cuenta. Incluye travesía guiada en el Río Maipo, equipamiento completo e inducción de seguridad. Al finalizar hay espacio para ducharse y cambiarse.",
+      "Una experiencia guiada, segura y bien planificada para disfrutar el Río Maipo con calma y confianza.\n\n" +
+      "Durante aproximadamente 3 horas, navegarás acompañado por guías expertos, con equipamiento técnico profesional y una inducción personalizada antes de ingresar al río.\n\n" +
+      "No se trata solo de remar.\n" +
+      "Se trata de vivir el entorno con tranquilidad, seguridad y atención en los detalles.",
+    includesTitle: "Incluye:",
     bullets: [
-      "Travesía guiada (aprox. 3 horas)",
-      "Guía + equipamiento + inducción de seguridad",
-      "Espacio para ducharse y cambiarse",
-      "Ideal para parejas y grupos",
+      "Duración aproximada: 3 horas",
+      "Inducción personalizada (apta para principiantes)",
+      "Equipamiento técnico completo",
+      "Guías certificados con experiencia en río",
+      "Espacios para ducharse y cambiarse",
     ],
-    image: "/media/images/exp-fullday-sin-parcela.jpg",
-    whatsappText:
-      "Hola! Quiero cotizar Full Day sin parcela. Somos ___ personas. ¿Fechas disponibles y valores?",
-    ctaLabel: "Reservar Full Day",
-    gallery: [
-      { type: "image", src: "/media/images/galeria-3.jpg", alt: "Full day 1" },
-      { type: "video", src: "/media/videos/promo-2.mp4", title: "Promo" },
-    ],
-  },
-
-  {
-    id: "medio-dia",
-    title: "Actividades de medio día",
-    subtitle: "La experiencia clásica: segura, guiada y sin complicaciones",
-    desc:
-      "Travesías guiadas de aproximadamente 3 horas, pensadas para disfrutar el río con tranquilidad. Ajustamos el nivel según el grupo. Incluye equipamiento completo, inducción de seguridad y acompañamiento de guías. Al finalizar hay espacio para ducharse y cambiarse.",
-    bullets: [
-      "Duración: ~3 horas",
-      "Apta para principiantes (nivel ajustable)",
-      "Guía + equipamiento + inducción de seguridad",
-      "Espacio para ducharse y cambiarse",
-    ],
+    tags: ["Clásica", "Apta para principiantes", "Seguridad profesional"],
     image: "/media/images/exp-medio-dia.jpg",
     whatsappText:
-      "Hola! Quiero reservar una actividad de medio día. Somos ___ personas. ¿Qué opciones y valores tienen?",
-    ctaLabel: "Reservar medio día",
+      "Hola! Quiero reservar la 'Experiencia Clásica · Travesía de Medio Día'. Somos ___ personas. ¿Qué horarios tienen?",
+    ctaLabel: "Reservar experiencia",
+    secondaryCtaLabel: "Consultar disponibilidad",
+    secondaryCtaHref: "#contacto",
     gallery: [
       { type: "image", src: "/media/images/galeria-1.jpg", alt: "Medio día 1" },
       { type: "image", src: "/media/images/galeria-2.jpg", alt: "Medio día 2" },
     ],
   },
 
+  // 4) Experiencias Privadas & Corporativas
   {
-    id: "servicios-particulares",
-    title: "Servicios particulares",
-    subtitle: "Plan a medida para empresas, grupos y celebraciones",
+    id: "privadas-corporativas",
+    title: "Experiencias Privadas & Corporativas",
+    subtitle: "Propuestas a medida para equipos, grupos y celebraciones",
     desc:
-      "Armamos experiencias personalizadas según tu necesidad: salidas privadas, actividades para empresas, celebraciones, convenios o coordinaciones especiales. Cuéntanos tu idea y armamos una propuesta con horarios, logística y recomendaciones.",
+      "Diseñamos jornadas a medida para empresas, equipos y celebraciones privadas que buscan algo distinto.\n\n" +
+      "Cada experiencia se planifica cuidadosamente: logística, horarios, nivel de dificultad y acompañamiento profesional.\n\n" +
+      "No trabajamos con formatos rígidos.\n" +
+      "Creamos propuestas personalizadas según el objetivo del grupo.\n\n" +
+      "Ya sea una salida corporativa, una celebración especial o una actividad privada, coordinamos cada detalle para que el grupo solo se dedique a vivir la experiencia.",
+    includesTitle: "Incluye:",
     bullets: [
-      "Experiencia privada o corporativa",
-      "Coordinación a medida (horarios y logística)",
-      "Opciones para grupos / celebraciones",
-      "Soporte y guía especializada",
+      "Experiencias privadas o corporativas",
+      "Planificación y coordinación personalizada",
+      "Logística organizada según el grupo",
+      "Guías certificados y soporte profesional",
     ],
+    tags: ["A medida", "Corporativo", "Privado", "Coordinación personalizada"],
     image: "/media/images/exp-servicios-particulares.jpg",
     whatsappText:
-      "Hola! Quiero coordinar un servicio particular para un grupo/empresa. Somos ___ personas. ¿Podemos revisar opciones y disponibilidad?",
-    ctaLabel: "Cotizar servicio particular",
+      "Hola! Quiero solicitar una propuesta privada/corporativa. Personas: ____. Fecha estimada: ____. Objetivo: ____.",
+    ctaLabel: "Solicitar propuesta privada",
+    secondaryCtaLabel: "Consultar disponibilidad",
+    secondaryCtaHref: "#contacto",
     gallery: [],
   },
 ];

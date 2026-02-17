@@ -20,33 +20,70 @@ export default function ExperienceShowcase({ items = [] }) {
           <div className="showcase-content">
             <h3 className="showcase-title">{x.title}</h3>
             {x.subtitle && <p className="showcase-subtitle">{x.subtitle}</p>}
-            <p className="showcase-desc">{x.desc}</p>
 
-            {Array.isArray(x.bullets) && x.bullets.length > 0 && (
-              <ul className="showcase-list">
-                {x.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
+            {/* Desc con saltos de línea */}
+            {x.desc && (
+              <p className="showcase-desc preline">
+                {x.desc}
+              </p>
+            )}
+
+            {/* Tags / chips */}
+            {Array.isArray(x.tags) && x.tags.length > 0 && (
+              <div className="showcase-tags">
+                {x.tags.map((t, i) => (
+                  <span key={i} className="chip">
+                    {t}
+                  </span>
                 ))}
-              </ul>
+              </div>
+            )}
+
+            {/* Lista (Incluye) */}
+            {Array.isArray(x.bullets) && x.bullets.length > 0 && (
+              <div className="showcase-includes">
+                <p className="showcase-includes-title">
+                  <strong>{x.includesTitle || "Incluye:"}</strong>
+                </p>
+                <ul className="showcase-list">
+                  {x.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              </div>
             )}
 
             <div className="showcase-actions">
+              {/* Botón principal */}
               <a
                 className="btn btn-primary"
                 href={buildWhatsAppLink(x.whatsappText)}
                 target="_blank"
                 rel="noreferrer"
               >
-                {x.ctaLabel || "Reservar"}
+                {x.ctaLabel || "Coordinar experiencia"}
               </a>
-              <a className="btn" href="#contacto">
-                Consultar
-              </a>
+
+              {/* Botón secundario configurable */}
+              {x.secondaryCtaLabel ? (
+                <a
+                  className="btn"
+                  href={x.secondaryCtaHref || "#contacto"}
+                  target={x.secondaryCtaHref?.startsWith("http") ? "_blank" : undefined}
+                  rel={x.secondaryCtaHref?.startsWith("http") ? "noreferrer" : undefined}
+                >
+                  {x.secondaryCtaLabel}
+                </a>
+              ) : (
+                <a className="btn" href="#contacto">
+                  Consultar disponibilidad
+                </a>
+              )}
             </div>
 
-            {/* Mini media (fotos/videos) opcional */}
+            {/* Mini media (galería) opcional */}
             {Array.isArray(x.gallery) && x.gallery.length > 0 && (
-              <div className="mini-grid">
+              <div className="mini-grid" id={x.galleryId}>
                 {x.gallery.map((m, i) => (
                   <div key={i} className="mini-item frame">
                     {m.type === "video" ? (

@@ -7,11 +7,26 @@ export default function Hero() {
         <div className="card hero-card">
           <div className="hero-wrap">
             <div>
-              <div className="kicker">Río Maipo • Isla de Maipo</div>
+              <div className="kicker">Travesías en kayak por el Río Maipo</div>
               <h1>{site.tagline}</h1>
               <p>
-                Bajadas guiadas, seguras y contemplativas. Fotos reales + videos de la experiencia.
-                Reserva directo por WhatsApp.
+                Una experiencia guiada, segura y cuidadosamente diseñada para quienes valoran la naturaleza y el detalle.
+                Remarás acompañado por guías expertos, con equipamiento técnico profesional y en un entorno natural privilegiado del Río Maipo.
+                Aquí no vienes solo a navegar.
+                Vienes a vivir el río con presencia, calma y autenticidad.
+                Grupos reducidos.
+                Planificación precisa.
+                Atención personalizada en cada etapa.
+                <p><strong>Incluye:</strong></p>
+
+                <ul>
+                  <li>Equipamiento técnico de alta calidad</li>
+                  <li>Guías certificados con experiencia en río</li>
+                  <li>Registro fotográfico profesional incluido</li>
+                  <li>Inducción personalizada (apto para principiantes)</li>
+                </ul>
+                <p><strong>Duración aproximada:</strong> 3 horas.</p>
+
               </p>
 
               <div className="hero-actions">
@@ -24,10 +39,10 @@ export default function Hero() {
               </div>
 
               <div className="badges">
-                <span className="badge">~3 horas</span>
-                <span className="badge">Guías + equipo</span>
-                <span className="badge">Apto principiantes</span>
-                <span className="badge">Fotos incluidas</span>
+                <span className="badge">Grupos reducidos</span>
+                <span className="badge">Atención personalizada</span>
+                <span className="badge">Seguridad profesional</span>
+                <span className="badge">Registro incluido</span>
               </div>
             </div>
 
